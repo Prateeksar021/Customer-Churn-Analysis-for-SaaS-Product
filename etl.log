@@ -1,0 +1,5 @@
+2025-06-24 11:57:40,307 - INFO - Database initialized successfully
+2025-06-24 11:57:40,415 - INFO - Processed user_activity_day1.csv: 100 inserts, 217 updates
+2025-06-24 11:57:40,505 - INFO - Processed user_activity_day2.csv: 92 inserts, 186 updates
+2025-06-24 11:57:40,582 - INFO - Processed user_activity_day3.csv: 81 inserts, 157 updates
+2025-06-24 11:57:40,582 - INFO - ETL process completed
