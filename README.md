@@ -30,6 +30,24 @@ The objective is to simulate and analyze user behavior over 3 days for a SaaS pr
 ├── user_activity.db
 └── README.md
 
+
+---
+
+## ⚙️ How to Run This Project
+
+### ✅ Step 1: Clone the Repo
+
+```bash
+git clone https://github.com/your-username/saas-churn-analysis.git
+cd saas-churn-analysis
+
+# Step 2: Install Requirements
+pip install -r requirements.txt
+
+# Step 3: Run the Dashboard
+enter on bash
+streamlit run Main.py
+
 # Dashboard Features
 KPIs: Total users, Active users, Churned users, Senior citizens
 
