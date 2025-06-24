@@ -88,6 +88,60 @@ Streamlit (for interactive BI Dashboard)
 
 Faker (to generate synthetic user data)
 
+## 🧩 Star Schema Design (ER Diagram)
+                   +---------------------+
+                   |     DimUser         |
+                   +---------------------+
+                   | user_id (PK)        |
+                   | user_name           |
+                   | senior_citizen      |
+                   | plan_type           |
+                   | location            |
+                   +---------------------+
+                            |
+                            |
+                            v
++------------------+     +---------------------+     +------------------+
+|   DimTime        |     |   FactUserActivity  |     |   DimPlan        |
++------------------+     +---------------------+     +------------------+
+| time_id (PK)     |     | activity_id (PK)     |     | plan_type (PK)   |
+| date             |     | user_id (FK)         |     | price            |
+| day              |     | time_id (FK)         |     | tier_level       |
+| month            |     | session_count        |     +------------------+
+| year             |     | last_login           |
++------------------+     | is_active            |
+                         | load_date            |
+                         | update_timestamp     |
+                         +----------------------+
 
+                      ^                         
+                      |
+               +------------------+
+               |   DimLocation    |
+               +------------------+
+               | location (PK)    |
+               | region           |
+               +------------------+
 
+## Table Descriptions
+# FactUserActivity
+Stores measurable events like session count, last login, activity status.
+
+Foreign Keys: user_id, time_id, plan_type, location
+
+# DimUser
+One row per user
+
+Includes demographics (senior citizen), name, and FK info
+
+# DimPlan
+Contains plan types (Free, Basic, Premium)
+
+Optionally includes price, tier info
+
+# DimLocation
+Holds city/state or region grouping
+
+# DimTime
+Helps with trend analysis (day, month, year filters)
 
