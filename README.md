@@ -33,9 +33,9 @@ The objective is to simulate and analyze user behavior over 3 days for a SaaS pr
 
 ---
 
-## ⚙️ How to Run This Project
+# How to Run This Project
 
-### ✅ Step 1: Clone the Repo
+# Step 1: Clone the Repo
 
 ```bash
 git clone https://github.com/your-username/saas-churn-analysis.git
